@@ -1,25 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.daboross.bukkitdev</groupId>
-    <artifactId>PlayerData</artifactId>
-    <packaging>pom</packaging>
-    <version>4.0.1-SNAPSHOT</version>
-    <name>PlayerData</name>
+    <artifactId>playerdata-api</artifactId>
+    <packaging>jar</packaging>
+    <version>2.0.0</version>
+    <name>PlayerDataAPI</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <issueManagement>
-        <system>GitHub</system>
-        <url>https://github.com/daboross/PlayerData/issues</url>
-    </issueManagement>
-    <modules>
-        <module>PlayerDataAPI</module>
-        <module>PlayerDataPlugin</module>
-    </modules>
     <scm>
-        <connection>scm:git:git://github.com/daboross/PlayerData.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/daboross/PlayerData.git</developerConnection>
-        <url>https://github.com/daboross/PlayerData.git</url>
+        <connection>scm:git:git://github.com/daboross/PlayerData-API.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/daboross/PlayerData-API.git</developerConnection>
+        <url>https://github.com/daboross/PlayerData-API.git</url>
     </scm>
     <repositories>
         <repository>
@@ -32,6 +24,16 @@
         </repository>
     </repositories>
     <build>
+        <finalName>${project.name}</finalName>
+        <resources>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
