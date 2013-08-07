@@ -25,20 +25,20 @@ import java.util.concurrent.TimeUnit;
 public class DateHelper {
 
     /**
-     * Get a visually nice date from a timestamp. Acts like: 4 years, 2 months,
-     * 1 day, 10 hours, 30 minutes, and 9 seconds (That is just a random string
-     * of numbers I came up with, but that is what the formating is like) Will
-     * emit any terms that are 0, eg, if 0 days, then it would be 4 years, 2
-     * months, 10 hours, 30 minutes, and 9 seconds Will put a , between all
-     * terms and also a , and between the last term and the second to last term.
-     * would do 4 years, 2 months and 10 hours returns now if
+     * Get a visually nice date from a relative timestamp. Emits any terms with
+     * 0, and displays the first 2 found terms. For instance will display the
+     * month and day if there are 0 years.
      *
      * @param millis the millisecond value to turn into a date string
-     * @return A visually nice relative date.
+     * @return A visually nice relative date, or 'Not that long' if millis
+     * equals 0
+     * @throws IllegalArgumentException if <code>millis</code> is less than 0
      */
     public static String relativeFormat(long millis) {
-        if (millis == 0) {
-            return "Not That Long";
+        if (millis < 0) {
+            throw new IllegalArgumentException("millis < 0");
+        } else if (millis == 0) {
+            return "Not that long";
         }
         long years, days, hours, minutes, seconds;
 

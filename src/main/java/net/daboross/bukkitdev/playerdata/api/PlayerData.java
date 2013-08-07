@@ -53,25 +53,19 @@ public interface PlayerData {
     public long getTimePlayed();
 
     /**
-     * Gets an unmodifiable list of times that this player has logged in.
+     * Gets an unmodifiable list of all login/logout sessions. Each SessionData
+     * stores the login time, IP, and logout time.
      *
-     * @return An unmodifiable list of LoginDatas which contains all times that
-     * this player has logged in.
+     * @return An unmodifiable list of <code>SessionData</code>s which contains
+     * all times that this player has logged in.
      */
-    public List<LoginData> getAllLogins();
-
-    /**
-     * Gets an unmodifiable list of times that this player has logged out.
-     *
-     * @return An unmodifiable list of Longs which contains all times that this
-     * player has logged out.
-     */
-    public List<Long> getAllLogouts();
+    public List<SessionData> getAllLoginSessions();
 
     /**
      * Gets the last date that this player was online.
      *
-     * @return The last time that this player was online in milliseconds.
+     * @return The last time that this player was online in milliseconds,
+     * or <code>System.currentTimeMilis()</code> if online right now.
      */
     public long getLastSeen();
 
@@ -92,9 +86,11 @@ public interface PlayerData {
      * previously under the same dataName.
      *
      * @param dataName The name to store the data under.
-     * @param data The data to store under dataName.
+     * @param data The data to store under dataName, or null to remove previous
+     * data stored under dataName.
      * @return The extra data that was stored previously under dataName if any,
      * or null if no extra data was stored under the given name before.
+     * @throws IllegalArgumentException if dataName is null.
      */
     public String[] addExtraData(String dataName, String[] data);
 
@@ -120,5 +116,5 @@ public interface PlayerData {
      *
      * @return A list containing all names that extra data is stored under.
      */
-    public String[] getExtraDataNames();
+    public List<String> getExtraDataNames();
 }

@@ -3,7 +3,7 @@
     <groupId>net.daboross.bukkitdev</groupId>
     <artifactId>playerdata-api</artifactId>
     <packaging>jar</packaging>
-    <version>2.0.0</version>
+    <version>3-SNAPSHOT</version>
     <name>PlayerDataAPI</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

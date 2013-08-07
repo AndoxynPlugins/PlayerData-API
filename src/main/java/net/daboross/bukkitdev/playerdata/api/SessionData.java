@@ -20,20 +20,29 @@ package net.daboross.bukkitdev.playerdata.api;
  *
  * @author daboross
  */
-public interface LoginData {
+public interface SessionData {
 
     /**
-     * Gets the IP that was used for this login.
+     * Gets the IP that was used in this session.
      *
-     * @return The IP that the player used when logging in.
+     * @return The IP of the player during this session.
      */
     public String getIP();
 
     /**
-     * Gets the date that was used for this login.
+     * Gets the login date for this Session.
      *
      * @return A long in milliseconds that represents the date that the player
-     * logged in.
+     * logged in to this session.
      */
-    public long getDate();
+    public long getLoginDate();
+
+    /**
+     * Gets the logout date for this Session.
+     *
+     * @return A long in milliseconds that represents the date that the player
+     * logged out of this session, or <code>System.currentTimeMilis()</code> if
+     * the player is online and this is the latest session for that player.
+     */
+    public long getLogoutDate();
 }

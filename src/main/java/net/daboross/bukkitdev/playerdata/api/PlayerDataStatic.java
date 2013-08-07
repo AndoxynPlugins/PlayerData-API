@@ -36,7 +36,7 @@ public class PlayerDataStatic {
     }
 
     public static boolean isPermissionLoaded() {
-        return playerDataPlugin == null ? null : playerDataPlugin.isPermissionLoaded();
+        return playerDataPlugin == null ? false : playerDataPlugin.isPermissionLoaded();
     }
 
     public static Permission getPermissionHandler() {
@@ -48,7 +48,7 @@ public class PlayerDataStatic {
     }
 
     public static int getAPIVersion() {
-        return 2;
+        return 3;
     }
 
     public static void setPlayerDataPlugin(PlayerDataPlugin playerDataPlugin) {
