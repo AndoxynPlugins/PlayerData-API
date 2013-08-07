@@ -57,7 +57,7 @@ public class PlayerDataInfoEvent extends Event {
         return handler;
     }
 
-    public void addExtraInfo(String info) {
+    public void addInfo(String info) {
         extraInfo.add(info);
     }
 
