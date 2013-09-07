@@ -2,17 +2,54 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.daboross.bukkitdev</groupId>
     <artifactId>playerdata-api</artifactId>
-    <packaging>jar</packaging>
     <version>3-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
     <name>PlayerDataAPI</name>
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <description>API for PlayerData</description>
+    <url>https://github.com/daboross/PlayerData-API</url>
+    <inceptionYear>2013</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU General Public License (GPL) Version 3</name>
+            <url>http://www.gnu.org/licenses/gpl.html</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <id>daboross</id>
+            <name>Dabo Ross</name>
+            <email>daboross@daboross.net</email>
+            <url>http://www.daboross.net</url>
+            <timezone>-8</timezone>
+        </developer>
+    </developers>
+
     <scm>
         <connection>scm:git:git://github.com/daboross/PlayerData-API.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/daboross/PlayerData-API.git</developerConnection>
-        <url>https://github.com/daboross/PlayerData-API.git</url>
+        <url>https://github.com/daboross/PlayerData-API</url>
     </scm>
+    <properties>
+        <netbeans.hint.license>gpl3</netbeans.hint.license>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>net.milkbowl.vault</groupId>
+            <artifactId>Vault</artifactId>
+            <version>1.2.26-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>bukkit</artifactId>
+            <version>1.6.2-R0.1-SNAPSHOT</version>
+            <type>jar</type>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
     <repositories>
         <repository>
             <id>vault-repo</id>
@@ -44,21 +81,36 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.7</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>net.milkbowl.vault</groupId>
-            <artifactId>Vault</artifactId>
-            <version>1.2.26-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.6.2-R0.1-SNAPSHOT</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
-    </dependencies>
+    <issueManagement>
+        <url>https://github.com/daboross/PlayerData-API.git</url>
+        <system>Github Issues</system>
+    </issueManagement>
 </project>
