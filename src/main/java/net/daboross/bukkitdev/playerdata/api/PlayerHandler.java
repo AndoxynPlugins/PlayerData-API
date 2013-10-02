@@ -30,7 +30,7 @@ public interface PlayerHandler {
      * partial displayname. This function only works for players inside
      * PlayerData's database.
      *
-     * @returns The username of the first player found who's displayname or
+     * @return The username of the first player found who's displayname or
      * username contains the given name, or null if not found.
      */
     public String getFullUsername(String name);
