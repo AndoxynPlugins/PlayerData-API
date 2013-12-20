@@ -25,10 +25,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.event.Event;
 import org.bukkit.event.HandlerList;
 
-/**
- *
- * @author daboross
- */
 public class PlayerDataInfoEvent extends Event {
 
     private static final HandlerList handlers = new HandlerList();

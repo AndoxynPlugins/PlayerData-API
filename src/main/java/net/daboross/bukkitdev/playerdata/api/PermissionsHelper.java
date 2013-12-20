@@ -16,10 +16,6 @@
  */
 package net.daboross.bukkitdev.playerdata.api;
 
-/**
- *
- * @author daboross
- */
 public class PermissionsHelper {
 
     public static boolean userInGroup(String username, String groupname) {

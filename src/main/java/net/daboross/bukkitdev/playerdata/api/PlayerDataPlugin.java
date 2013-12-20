@@ -19,10 +19,6 @@ package net.daboross.bukkitdev.playerdata.api;
 import net.milkbowl.vault.permission.Permission;
 import org.bukkit.plugin.Plugin;
 
-/**
- *
- * @author daboross
- */
 public interface PlayerDataPlugin extends Plugin {
 
     public PlayerHandler getHandler();

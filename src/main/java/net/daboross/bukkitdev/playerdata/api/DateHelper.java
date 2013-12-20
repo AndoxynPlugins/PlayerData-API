@@ -18,10 +18,6 @@ package net.daboross.bukkitdev.playerdata.api;
 
 import java.util.concurrent.TimeUnit;
 
-/**
- *
- * @author daboross
- */
 public class DateHelper {
 
     /**

@@ -19,10 +19,6 @@ package net.daboross.bukkitdev.playerdata.api;
 import java.util.logging.Logger;
 import net.milkbowl.vault.permission.Permission;
 
-/**
- *
- * @author daboross
- */
 public class PlayerDataStatic {
 
     private static PlayerDataPlugin playerDataPlugin;

@@ -19,10 +19,6 @@ package net.daboross.bukkitdev.playerdata.api;
 import java.util.List;
 import org.bukkit.entity.Player;
 
-/**
- *
- * @author daboross
- */
 public interface PlayerHandler {
 
     /**

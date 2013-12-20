@@ -18,10 +18,6 @@ package net.daboross.bukkitdev.playerdata.api;
 
 import java.util.List;
 
-/**
- *
- * @author daboross
- */
 public interface PlayerData {
 
     /**
@@ -53,15 +49,6 @@ public interface PlayerData {
     public long getTimePlayed();
 
     /**
-     * Gets an unmodifiable list of all login/logout sessions. Each SessionData
-     * stores the login time, IP, and logout time.
-     *
-     * @return An unmodifiable list of <code>SessionData</code>s which contains
-     * all times that this player has logged in.
-     */
-    public List<SessionData> getAllLoginSessions();
-
-    /**
      * Gets the last date that this player was online.
      *
      * @return The last time that this player was online in milliseconds,
@@ -86,8 +73,8 @@ public interface PlayerData {
      * previously under the same dataName.
      *
      * @param dataName The name to store the data under.
-     * @param data The data to store under dataName, or null to remove previous
-     * data stored under dataName.
+     * @param data     The data to store under dataName, or null to remove previous
+     *                 data stored under dataName.
      * @return The extra data that was stored previously under dataName if any,
      * or null if no extra data was stored under the given name before.
      * @throws IllegalArgumentException if dataName is null.
